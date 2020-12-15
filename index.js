@@ -80,8 +80,12 @@ hint: the strings returned need to exactly match the string in step 4.
 function getWinnersByYear(array, getYears, getWinners) {
     let years = getYears(array);
     let winners = getWinners(array);
-    
-    
+    let str = [];
+    years.forEach(function(year, ind){
+        str.push("In " + year + ", " + winners[ind] + " won the world cup!");
+    })
+    return str;
+
 }
 
 
